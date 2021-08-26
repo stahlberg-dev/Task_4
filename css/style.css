@@ -6,3 +6,74 @@ body {
 	color: #333;
 }
 
+.container {
+	/* width: 100%; */
+	min-width: 1920px;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 120px 70px 1fr 190px;
+	grid-template-columns: 1fr 220px 820px 340px 1fr;
+	grid-gap: 20px;
+	grid-template-areas: "header-area header-area header-area header-area header-area"
+		". aside-area search-area search-area ."
+		". aside-area main-area . ."
+		"footer-area footer-area footer-area footer-area footer-area";
+}
+
+/* Header styles start */
+
+.header {
+	grid-area: header-area;
+	background-color: #e8e8e8;
+}
+
+/* Header styles end */
+
+/* Aside styles start */
+
+.aside {
+	grid-area: aside-area;
+	background-color: #e8e8e8;
+}
+
+/* Aside styles end */
+
+/* Search styles start */
+
+.search {
+	grid-area: search-area;
+	background-color: #e8e8e8;
+}
+
+/* Search styles end */
+
+
+/* Main styles start */
+
+.main {
+	grid-area: main-area;
+	margin-bottom: 114px;
+	background-color: #fff;
+}
+
+h1 {
+	font-size: 20px;
+	line-height: 23px;
+	font-family: Roboto;
+	font-weight: 700;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+
+
+/* Main styles end */
+
+/* Footer styles start */
+
+.footer {
+	grid-area: footer-area;
+	background-color: #e8e8e8;
+}
+
+/* Footer styles end */
