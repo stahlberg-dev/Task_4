@@ -235,6 +235,10 @@ h1 {
 	left: 40px;
 }
 
+.orders__body {
+	margin-bottom: 30px;
+}
+
 .order-head {
 	background-color: #f5f5f5;
 	border-radius: 2px;
@@ -489,6 +493,72 @@ h1 {
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 28px;
+}
+
+.orders__footer {
+    display: flex;
+    flex-flow: row nowrap;
+	justify-content: flex-start;
+    align-items: center;
+}
+
+.load-more {
+    padding: 10px 20px;
+    border: 1px solid #279eb9;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 10px;
+    line-height: 12px;
+    color: #279eb9;
+	transition: color 0.2s ease,
+				border-color 0.2s ease;
+}
+
+.load-more:hover {
+    color: hsl(191, 65%, 55%);
+    border-color: hsl(191, 65%, 55%);
+}
+
+.load-more:active {
+	color: hsl(191, 65%, 35%);
+    border-color: hsl(191, 65%, 35%);
+}
+
+.controls {
+    display: flex;
+    flex-flow: row nowrap;
+	justify-content: flex-start;
+    align-items: baseline;
+    margin-right: 31px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.controls__page-number,
+.controls__space {
+    width: 22px;
+    height: 22px;
+    margin-right: 3px;
+    padding: 2px 7px;
+}
+
+.controls__page-number:not(.current),
+.controls__next {
+    cursor: pointer;
+}
+
+.controls__next {
+    padding: 2px 7px;
+}
+
+.controls__page-number.current,
+.controls__page-number:hover,
+.controls__next:hover {
+    background-color: #F5F5F5;
+    border: 1px solid #E9E9E9;
+    border-radius: 2px;
+    padding: 2px 6px;
 }
 
 /* Main styles end */
