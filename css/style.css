@@ -529,7 +529,7 @@ h1 {
     display: flex;
     flex-flow: row nowrap;
 	justify-content: flex-start;
-    align-items: baseline;
+    align-items: center;
     margin-right: 31px;
     font-size: 14px;
     line-height: 16px;
@@ -537,10 +537,23 @@ h1 {
 
 .controls__page-number,
 .controls__space {
+	position: relative;
     width: 22px;
     height: 22px;
     margin-right: 3px;
-    padding: 2px 7px;
+	background-color: #FFF;
+    border: 1px solid #FFF;
+	transition: background-color 0.2s ease,
+				border-color 0.2s ease;
+}
+
+.controls__page-number::after,
+.controls__space::after {
+	content: attr(data-num);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .controls__page-number:not(.current),
@@ -550,15 +563,20 @@ h1 {
 
 .controls__next {
     padding: 2px 7px;
+	background-color: #FFF;
+    border: 1px solid #FFF;
+	transition: background-color 0.2s ease,
+				border-color 0.2s ease;
 }
 
 .controls__page-number.current,
 .controls__page-number:hover,
-.controls__next:hover {
+.controls__page-number:active,
+.controls__next:hover, 
+.controls__next:active {
     background-color: #F5F5F5;
     border: 1px solid #E9E9E9;
     border-radius: 2px;
-    padding: 2px 6px;
 }
 
 /* Main styles end */
